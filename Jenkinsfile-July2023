@@ -14,10 +14,10 @@ node{
     sh "${mavenHome}/bin/mvn deploy"
   }
 
-  /* stage('5Deploy'){
+  stage('5Deploy'){
    deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials3', path: '', url: 'http://18.234.218.143:8177/')], contextPath: null, war: 'target/*war'
   }
-  stage('6Notification'){
+  /* stage('6Notification'){
     emailext body: '''Hi Team,
 Build status
 Landmark Technologies''', recipientProviders: [developers(), contributor()], subject: 'build status', to: 'developers'
